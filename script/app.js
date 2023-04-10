@@ -1,5 +1,6 @@
 const cardText = document.querySelectorAll('.card-text');
 const cardGrid = document.querySelector('.row.row-cols-1.row-cols-md-2');
+const switcher = document.querySelector('.form-check-input');
 
 cardText.forEach(elem => {
     let elemHeight = elem.offsetHeight;
@@ -68,4 +69,10 @@ window.addEventListener('scroll', () => {
         document.documentElement.scrollHeight) {
         loadImages();
     }
+});
+
+switcher.addEventListener('click', () => {
+    let htmlElement = document.querySelector("html");
+    htmlElement.getAttribute('data-bs-theme') == 'light' ? htmlElement.setAttribute('data-bs-theme', 'dark') : htmlElement.setAttribute('data-bs-theme', 'light')
+
 });
