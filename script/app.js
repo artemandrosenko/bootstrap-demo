@@ -73,6 +73,7 @@ window.addEventListener('scroll', () => {
 
 switcher.addEventListener('click', () => {
     let htmlElement = document.querySelector("html");
-    htmlElement.getAttribute('data-bs-theme') == 'light' ? htmlElement.setAttribute('data-bs-theme', 'dark') : htmlElement.setAttribute('data-bs-theme', 'light')
+    htmlElement.dataset.bsTheme = 
+        htmlElement.dataset.bsTheme == 'light'? 'dark' : 'light';
 
 });
